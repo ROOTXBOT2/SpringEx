@@ -1,7 +1,6 @@
-package hello.hello_spring.controller;
+package hello.hello_spring.basic.controller;
 
-import hello.hello_spring.dto.Hello;
-import org.springframework.boot.autoconfigure.batch.BatchTransactionManager;
+import hello.hello_spring.basic.dto.Hello;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
