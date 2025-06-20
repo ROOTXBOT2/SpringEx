@@ -6,15 +6,15 @@ import spring.core_basic.member.Member;
 /**
  * @author rua
  */
-public class FixDisxountPolicy implements DiscountPolicy {
+public class RateDiscountPolicy implements DiscountPolicy {
 
-    private int discountFixAmount = 1000; //1000원 할인
+    private int discountPercent = 10;
 
     @Override
     public int discount(Member member, int price) {
         if(member.getGrade() == Grade.VIP){
-            return discountFixAmount;
-        }else {
+            return price * discountPercent /100;
+        } else {
             return 0;
         }
     }

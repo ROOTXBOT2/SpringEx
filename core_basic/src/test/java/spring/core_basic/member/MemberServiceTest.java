@@ -1,8 +1,10 @@
 package spring.core_basic.member;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import spring.core_basic.AppConfig;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -10,8 +12,14 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author rua
  */
 class MemberServiceTest {
+    MemberService memberService;
 
-    MemberService memberService = new MemberServiceImpl();
+    @BeforeEach
+    public void beforeEach() {
+        AppConfig appConfig = new AppConfig();
+        memberService = appConfig.membverService();
+    }
+
     @Test
     @DisplayName("회원 가입 및 호출 테스트")
     void test() {

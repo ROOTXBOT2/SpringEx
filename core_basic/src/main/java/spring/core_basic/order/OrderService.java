@@ -1,4 +1,4 @@
-package spring.core_basic.discount;
+package spring.core_basic.order;
 
 /**
  * @author rua

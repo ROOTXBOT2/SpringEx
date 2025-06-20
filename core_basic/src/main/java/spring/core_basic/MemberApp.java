@@ -9,7 +9,9 @@ import spring.core_basic.member.Member;
  */
 public class MemberApp {
     public static void main(String[] args) {
-        MemberService memberService = new MemberServiceImpl();
+        AppConfig appConfig = new AppConfig();
+
+        MemberService memberService = appConfig.membverService();
         Member member1 = new Member( Grade.VIP,"memberA");
         memberService.join(member1);
 

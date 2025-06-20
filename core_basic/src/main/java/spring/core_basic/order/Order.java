@@ -1,4 +1,4 @@
-package spring.core_basic.discount;
+package spring.core_basic.order;
 
 import spring.core_basic.member.Member;
 
@@ -18,9 +18,10 @@ public class Order {
         this.memberId = memberId;
     }
 
-    public int caclulatePrice(Member member) {
+    public int caclulatePrice() {
         return itemPrice - discountPrice;
     }
+
     public int getDiscountPrice() {
         return discountPrice;
     }
