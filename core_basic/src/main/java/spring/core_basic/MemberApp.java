@@ -1,5 +1,7 @@
 package spring.core_basic;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import spring.core_basic.member.Grade;
 import spring.core_basic.member.MemberService;
 import spring.core_basic.member.MemberServiceImpl;
@@ -9,9 +11,12 @@ import spring.core_basic.member.Member;
  */
 public class MemberApp {
     public static void main(String[] args) {
-        AppConfig appConfig = new AppConfig();
+//        AppConfig appConfig = new AppConfig();
+//        MemberService memberService = appConfig.membverService();
+        
+        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+        MemberService memberService = context.getBean("memberService", MemberService.class);
 
-        MemberService memberService = appConfig.membverService();
         Member member1 = new Member( Grade.VIP,"memberA");
         memberService.join(member1);
 

@@ -1,5 +1,7 @@
 package spring.core_basic;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import spring.core_basic.discount.DiscountPolicy;
 import spring.core_basic.discount.FixDisxountPolicy;
 import spring.core_basic.discount.RateDiscountPolicy;
@@ -13,21 +15,23 @@ import spring.core_basic.order.OrderServiceImpl;
 /**
  * @author rua
  */
-
+@Configuration // 스프링에서는 설정 메서드에 이걸 사용하게 되어있음.
 public class AppConfig {
-    public MemberService membverService(){
+    @Bean
+    public MemberService memberService(){
         return new MemberServiceImpl(getMemberRepository());
     }
-
-    private MemberRepository getMemberRepository() {
+    @Bean
+    public MemberRepository getMemberRepository() {
         return new MemoryMemberRepository();
     }
-
+    @Bean
     public OrderService orderService(){
         return new OrderServiceImpl(getDiscountPolicy(), getMemberRepository());
     }
 
-    private DiscountPolicy getDiscountPolicy() {
+    @Bean
+    public DiscountPolicy getDiscountPolicy() {
 //        return new FixDisxountPolicy();
         return new RateDiscountPolicy();
     }
