@@ -29,7 +29,6 @@ public class AppConfig {
     public OrderService orderService(){
         return new OrderServiceImpl(getDiscountPolicy(), getMemberRepository());
     }
-
     @Bean
     public DiscountPolicy getDiscountPolicy() {
 //        return new FixDisxountPolicy();
