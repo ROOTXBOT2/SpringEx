@@ -19,16 +19,25 @@ import spring.core_basic.order.OrderServiceImpl;
 public class AppConfig {
     @Bean
     public MemberService memberService(){
+        // 1번
+        System.out.println("call AppConfig.memberService");
         return new MemberServiceImpl(getMemberRepository());
     }
+
     @Bean
     public MemberRepository getMemberRepository() {
+        //2~3번?
+        System.out.println("call AppConfig.getMemberRepository");
         return new MemoryMemberRepository();
     }
+
     @Bean
     public OrderService orderService(){
+        //1번?
+        System.out.println("call AppConfig.orderService");
         return new OrderServiceImpl(getDiscountPolicy(), getMemberRepository());
     }
+
     @Bean
     public DiscountPolicy getDiscountPolicy() {
 //        return new FixDisxountPolicy();
