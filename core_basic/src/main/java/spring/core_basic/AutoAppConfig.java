@@ -3,7 +3,6 @@ package spring.core_basic;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
-import org.springframework.stereotype.Component;
 
 /**
  * @author rua
@@ -12,6 +11,6 @@ import org.springframework.stereotype.Component;
 @ComponentScan(
         excludeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION, classes = Configuration.class)
 )
-public class AutoAPPConfig {
+public class AutoAppConfig {
 
 }
