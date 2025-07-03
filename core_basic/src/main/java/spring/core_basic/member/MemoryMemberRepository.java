@@ -1,6 +1,8 @@
 package spring.core_basic.member;
 
 import org.springframework.stereotype.Component;
+import spring.core_basic.annotation.MainDiscountPolicy;
+import spring.core_basic.annotation.MainMemberRepository;
 
 import java.util.Map;
 import java.util.Optional;
@@ -10,6 +12,7 @@ import java.util.concurrent.atomic.AtomicLong;
 /**
  * @author rua
  */
+@MainMemberRepository
 @Component
 public class MemoryMemberRepository implements MemberRepository {
 
