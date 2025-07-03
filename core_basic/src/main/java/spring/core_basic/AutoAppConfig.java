@@ -10,7 +10,7 @@ import spring.core_basic.order.OrderService;
  */
 @Configuration
 @ComponentScan(
-        basePackages = "spring.core_basic.member",
+        //basePackages = "spring.core_basic.member",
         excludeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION, classes = Configuration.class)
 )
 public class AutoAppConfig {

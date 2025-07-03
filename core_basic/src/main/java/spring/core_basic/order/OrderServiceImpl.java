@@ -5,10 +5,8 @@ import org.springframework.stereotype.Component;
 import spring.core_basic.annotation.MainDiscountPolicy;
 import spring.core_basic.annotation.MainMemberRepository;
 import spring.core_basic.discount.DiscountPolicy;
-import spring.core_basic.discount.FixDisxountPolicy;
 import spring.core_basic.member.Member;
 import spring.core_basic.member.MemberRepository;
-import spring.core_basic.member.MemoryMemberRepository;
 
 /**
  * @author rua

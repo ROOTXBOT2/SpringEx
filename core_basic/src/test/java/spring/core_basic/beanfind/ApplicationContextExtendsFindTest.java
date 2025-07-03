@@ -3,12 +3,11 @@ package spring.core_basic.beanfind;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.NoUniqueBeanDefinitionException;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import spring.core_basic.discount.DiscountPolicy;
-import spring.core_basic.discount.FixDisxountPolicy;
+import spring.core_basic.discount.FixDiscountPolicy;
 import spring.core_basic.discount.RateDiscountPolicy;
 
 /**
@@ -72,7 +71,7 @@ public class ApplicationContextExtendsFindTest {
 
         @Bean
         public DiscountPolicy fixDiscountPolicy() {
-            return new FixDisxountPolicy();
+            return new FixDiscountPolicy();
         }
     }
 }

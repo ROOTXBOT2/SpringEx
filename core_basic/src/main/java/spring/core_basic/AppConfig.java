@@ -3,7 +3,6 @@ package spring.core_basic;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import spring.core_basic.discount.DiscountPolicy;
-import spring.core_basic.discount.FixDisxountPolicy;
 import spring.core_basic.discount.RateDiscountPolicy;
 import spring.core_basic.member.MemberRepository;
 import spring.core_basic.member.MemberService;
